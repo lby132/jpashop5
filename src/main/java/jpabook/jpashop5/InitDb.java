@@ -3,12 +3,15 @@ package jpabook.jpashop5;
 import jpabook.jpashop5.domain.*;
 import jpabook.jpashop5.domain.item.Book;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import javax.persistence.EntityManager;
 
+@Slf4j
 @Component
 @RequiredArgsConstructor
 public class InitDb {
